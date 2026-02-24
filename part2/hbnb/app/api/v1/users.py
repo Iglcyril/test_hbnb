@@ -10,7 +10,6 @@ class UserList(Resource):
     def post(self):
         """Create a new user"""
         user_data = request.get_json()
-
         if not user_data:
             return {"error": "No user data"}, 400
         try:
@@ -25,11 +24,11 @@ class UserList(Resource):
         return [user.to_dict() for user in users], 200
 
 
-@api.route('/user_id>')
+@api.route('/<string:user_id>')
 class UserResource(Resource):
     def get(self, user_id):
         """Get a user by ID"""
-        user = facade.user_repo.get_all(user_id)
+        user = facade.user_repo.get(user_id)
         if not user:
             return {"error": "User not found"}, 404
         return user.to_dict(), 200
