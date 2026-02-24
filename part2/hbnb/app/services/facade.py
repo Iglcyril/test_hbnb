@@ -1,7 +1,5 @@
-# task0 
-# 5.Plan for the Facade Pattern with Placeholders
-#line 4 - 21
 from app.persistence.repository import InMemoryRepository
+from test_hbnb.part2.hbnb.app.models.user import User
 
 class HBnBFacade:
     def __init__(self):
@@ -12,10 +10,10 @@ class HBnBFacade:
 
     # Placeholder method for creating a user
     def create_user(self, user_data):
-        # Logic will be implemented in later tasks
-        pass
+        user = User(**user_data)
+        self.user_repo.create(user)
+        return user
 
     # Placeholder method for fetching a place by ID
     def get_place(self, place_id):
-        # Logic will be implemented in later tasks
-        pass
+        return self.place_repo.get(place_id)
