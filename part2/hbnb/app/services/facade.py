@@ -17,12 +17,26 @@ class HBnBFacade:
         self.user_repo.add(user)
         return user
 
-    # ===== PLACE METHODS =====
-    def get_place(self, place_id):
-        return self.place_repo.get(place_id)
+    def get_user(self, user_id):
+        return self.user_repo.get(user_id)
 
     def get_all_users(self):
         return self.user_repo.get_all()
+
+    def get_user_by_email(self, email):
+        return self.user_repo.get_by_attribute('email', email)
+
+    def update_user(self, user_id, user_data):
+        user = self.user_repo.get(user_id)
+        if not user:
+            return None
+        for key, value in user_data.items():
+            if key not in ['id', 'created_at', 'updated_at']:
+                setattr(user, key, value)
+        return user
+    # ===== PLACE METHODS =====
+    def get_place(self, place_id):
+        return self.place_repo.get(place_id)
 
     # ===== AMENITY METHODS =====
     def create_amenity(self, amenity_data):
@@ -44,7 +58,7 @@ class HBnBFacade:
         amenity = self.amenity_repo.get(amenity_id)
         if not amenity:
             return None
-        
+
         if 'name' in amenity_data:
             updated_amenity = Amenity(name=amenity_data['name'])
             updated_amenity.id = amenity.id
