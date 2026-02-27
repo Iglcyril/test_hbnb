@@ -367,11 +367,12 @@ PUT	/users/<id>	Update user
 🚫 DELETE not implemented.
 
 🏷️ Amenities
-Method | Endpoint | Description
-POST | amenities | Create
-GET	| amenities | List all
-GET	| amenities/<id> | Retrieve one
-PUT	| amenities/<id> | Update
+| Method | Endpoint | Description |
+|--------|----------|------------ |
+| POST | amenities | Create |
+| GET	| amenities | List all |
+| GET	| amenities/<id> | Retrieve one |
+| PUT	| amenities/<id> | Update |
 🏠 Places
 Method	Endpoint	Description
 POST	/places/	Create place
