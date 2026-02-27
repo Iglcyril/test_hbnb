@@ -84,7 +84,7 @@ Implemented Models:
 
 - latitude / longitude
 
--owner (User relationship)
+- owner (User relationship)
 
 - amenities (Many-to-Many)
 
@@ -120,7 +120,7 @@ app/persistence/repository.py
 
 ### 4. Facade Layer
 
-- The Facade pattern is used to:
+The Facade pattern is used to:
 
 - Centralize business operations
 
