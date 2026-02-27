@@ -1,333 +1,141 @@
-C#26 🎓 – HBnB Team Project – Part 2
-🏠 Overview
+# 🏠 C#28 🎓 – HBnB Team Project – Part 2
 
-This project is Part 2 of the HBnB application developed at Holberton School.
-It focuses on implementing the Business Logic layer and exposing it through a RESTful API built with Flask and Flask-RESTx.
-
-The goal is to design a clean, modular backend architecture using layered principles and the Facade pattern.
-
-🎯 Objectives
-
-Build a modular Flask application structure
-
-Implement core business models:
-
-User
-
-Place
-
-Review
-
-Amenity
-
-Create RESTful CRUD endpoints
-
-Implement a Facade layer to connect API and business logic
-
-Use an in-memory repository (extensible to database later)
-
-Implement unit and integration tests
-
-🗂️ Project Structure
-hbnb/
-├── app/
-│   ├── api/
-│   │   └── v1/
-│   │       ├── users.py
-│   │       ├── places.py
-│   │       ├── reviews.py
-│   │       ├── amenities.py
-│   ├── models/
-│   │   ├── basemodel.py
-│   │   ├── user.py
-│   │   ├── place.py
-│   │   ├── review.py
-│   │   ├── amenity.py
-│   ├── services/
-│   │   └── facade.py
-│   ├── persistence/
-│   │   └── repository.py
-├── tests/
-├── run.py
-├── config.py
-├── requirements.txt
-🧱 Architecture
-
-The application follows a layered architecture:
-
-🔹 API Layer (Presentation)
-
-Built with Flask + Flask-RESTx
-
-Handles HTTP requests and responses
-
-Provides Swagger documentation
-
-🔹 Business Logic Layer
-
-Contains entity definitions
-
-Handles validations and relationships
-
-Manages object behavior
-
-🔹 Persistence Layer
-
-In-memory repository
-
-Abstracted for future database integration
-
-🔹 Facade Layer
-
-Central access point between API and business logic
-
-Simplifies interactions between layers
-
-🏗️ Implemented Features
-👤 Users
-
-Create user
-
-Get all users
-
-Get user by ID
-
-Update user
-
-Password is stored securely and not returned in API responses.
-
-🏷️ Amenities
-
-Create amenity
-
-List amenities
-
-Get amenity by ID
-
-Update amenity
-
-🏠 Places
-
-Create place (linked to owner and amenities)
-
-List places
-
-Get place by ID (includes related data)
-
-Update place
-
-📝 Reviews
-
-Create review
-
-List reviews
-
-Get review by ID
-
-Update review
-
-Delete review
-
-🚀 Running the Project
-1️⃣ Install dependencies
-pip3 install -r requirements.txt
-2️⃣ Run the server
-python3 run.py
-
-Server runs on:
-
-http://localhost:5000
-
-Swagger documentation available at:
-
-http://localhost:5000/api/v1/
-🧪 Running Tests
-
-Run all unit tests:
-
-export PYTHONPATH=$PYTHONPATH:$(pwd)
-python3 -m unittest discover tests
-🔎 Example API Usage
-
-Create a user:
-
-curl -X POST http://localhost:5000/api/v1/users/ \
--H "Content-Type: application/json" \
--d '{"first_name":"Alice","last_name":"Doe","email":"alice@example.com"}'
-
-List users:
-
-curl http://localhost:5000/api/v1/users/
-📌 Technical Stack
-
-Python 3
-
-Flask
-
-Flask-RESTx
-
-unittest
-
-📚 Concepts Used
-
-Layered architecture
-
-REST API design
-
-Facade Design Pattern
-
-Object-Oriented Programming
-
-Data serialization
-
-👥 Team
-
-Holberton School – HBnB Project
-C#26 Cohort
-
-Si tu veux, je peux te faire :
-
-🔥 Une version plus “pro” orientée portfolio
-
-🎯 Une version plus courte pour évaluation Holberton
-
-💣 Une version optimisée pour recruteurs (cybersécurité / backend focus)
-
-Tu veux laquelle ?
-
-un peu plus complète
-
-Parfait 👌
-Voici une version plus complète, plus professionnelle, tout en restant claire et lisible pour ton repo holbertonschool-hbnb/part2/hbnb.
-
-C#26 🎓 – HBnB Team Project – Part 2
-🏠 Overview
+## 🏠 Overview
 
 HBnB is a backend web application inspired by AirBnB, developed as part of the Holberton School curriculum.
 
 This second part focuses on building:
 
-The Business Logic Layer
+- The Business Logic Layer
 
-The RESTful API (Presentation Layer)
+- The RESTful API (Presentation Layer)
 
-A clean and modular backend architecture
+- A clean and modular backend architecture
 
 The project is built using Python, Flask, and Flask-RESTx, following layered architecture principles and applying the Facade Design Pattern.
 
-🎯 Project Goals
+## 🎯 Project Goals
 
 By the end of Part 2, the application supports:
 
-Modular Flask application structure
+- Modular Flask application structure
 
-Object modeling with relationships
+- Object modeling with relationships
 
-RESTful CRUD endpoints
+- RESTful CRUD endpoints
 
-In-memory persistence layer
+- In-memory persistence layer
 
-Separation of concerns (API / Business / Persistence)
+- Separation of concerns (API / Business / Persistence)
 
-Data validation and serialization
+- Data validation and serialization
 
-Unit and integration testing
+- Unit and integration testing
 
-🧱 Architecture Overview
+## 🧱 Architecture Overview
 
 The application follows a layered architecture to ensure scalability and maintainability.
 
-🔹 1. API Layer (Presentation)
+### 1. API Layer (Presentation)
 
-Built with Flask and Flask-RESTx
+- Built with Flask and Flask-RESTx
 
-Defines REST endpoints
+- Defines REST endpoints
 
-Handles request parsing and response formatting
+- Handles request parsing and response formatting
 
-Automatically generates Swagger documentation
+- Automatically generates Swagger documentation
 
 Location:
-
+```code
 app/api/v1/
-🔹 2. Business Logic Layer
+```
+### 2. Business Logic Layer
 
 Contains all domain models and application logic.
 
 Implemented Models:
 
-BaseModel
+**BaseModel**
 
-id (UUID)
+- id (UUID)
 
-created_at
+- created_at
 
-updated_at
+- updated_at
 
-User
+**User**
 
-first_name
+- first_name
 
-last_name
+- last_name
 
-email
+- email
 
-password (not exposed in API)
+- password (not exposed in API)
 
-Place
+**Place**
 
-title
+- title
 
-description
+- description
 
-price
+- price
 
-latitude / longitude
+- latitude / longitude
 
-owner (User relationship)
+-owner (User relationship)
 
-amenities (Many-to-Many)
+- amenities (Many-to-Many)
 
-Amenity
+**Amenity**
 
-name
+- name
 
-Review
+**Review**
 
-text
+- text
 
-rating
+- rating
 
-linked to User and Place
+- linked to User and Place
 
 Location:
-
+```code
 app/models/
-🔹 3. Persistence Layer
+```
 
-In-memory repository implementation
+### 3. Persistence Layer
 
-Abstracted storage layer
+- In-memory repository implementation
 
-Easily replaceable with database (PostgreSQL, MySQL, etc.)
+- Abstracted storage layer
+
+- Easily replaceable with database (PostgreSQL, MySQL, etc.)
 
 Location:
-
+```code
 app/persistence/repository.py
-🔹 4. Facade Layer
+```
 
-The Facade pattern is used to:
+### 4. Facade Layer
 
-Centralize business operations
+- The Facade pattern is used to:
 
-Decouple API from model logic
+- Centralize business operations
 
-Provide a clean service interface
+- Decouple API from model logic
+
+- Provide a clean service interface
+
 
 Location:
-
+```code
 app/services/facade.py
-🗂️ Project Structure
+```
+
+## 🗂️ Project Structure
+```
 hbnb/
 ├── app/
 │   ├── __init__.py
@@ -351,12 +159,12 @@ hbnb/
 ├── run.py
 ├── config.py
 ├── requirements.txt
+```
 
 
-## 🚀 API Endpoints
 
+## 🚀 API Endpoints
 All routes are prefixed with:
-
 ```bash
 /api/v1/
 ```
@@ -437,16 +245,16 @@ curl -X POST http://localhost:5000/api/v1/users/ \
 -H "Content-Type: application/json" \
 -d '{"first_name":"Alice","last_name":"Doe","email":"alice@example.com"}'
 ```
-## 🛠️ Technologies Used
+##  🛠️ Technologies Used
 
-Python 3
+- Python 3
 
-Flask
+- Flask
 
-Flask-RESTx
+- Flask-RESTx
 
-unittest
+- unittest
 
-UUID
+- UUID
 
-RESTful API principles
+- RESTful API principles
