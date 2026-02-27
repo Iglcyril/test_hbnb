@@ -398,6 +398,7 @@ PUT	/users/<id>	Update user
 
 ## 🧪 Testing
 ### ✅ Run Unit Tests
+
 ```bash
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 python3 -m unittest discover tests
