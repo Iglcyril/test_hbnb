@@ -408,6 +408,7 @@ python3 -m unittest discover tests
 pip3 install -r requirements.txt
 ```
 ### 2️⃣ Start the server
+
 ```bash
 python3 run.py
 ```
