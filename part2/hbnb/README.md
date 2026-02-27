@@ -351,20 +351,22 @@ hbnb/
 ├── run.py
 ├── config.py
 ├── requirements.txt
-🚀 API Endpoints
 
+## 🚀 API Endpoints
 All routes are prefixed with:
 
+```bash
 /api/v1/
-👤 Users
-Method	Endpoint	Description
-POST	/users/	Create a user
-GET	/users/	List users
-GET	/users/<id>	Get user by ID
-PUT	/users/<id>	Update user
+```
 
-⚠️ Passwords are stored but never returned in API responses.
-🚫 DELETE not implemented.
+## 👤 Users
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | users | Create a user |
+| GET | users | List users |
+| GET | users/<id> | Get user by ID |
+| PUT | users/<id> | Update user |
+
 
 ## 🏷️ Amenities
 
