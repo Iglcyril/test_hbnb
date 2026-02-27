@@ -423,7 +423,7 @@ Swagger documentation:
 http://localhost:5000/api/v1/
 ```
 
-## 🧪 Example cURL Request
+##  🧪 Example cURL Request
 
 Create a user:
 ```bash
