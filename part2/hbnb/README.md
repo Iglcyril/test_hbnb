@@ -407,7 +407,7 @@ python3 -m unittest discover tests
 ```bash
 pip3 install -r requirements.txt
 ```
-### 2️⃣ Start the server
+## 2️⃣ Start the server
 
 ```bash
 python3 run.py
@@ -422,6 +422,7 @@ Swagger documentation:
 ```code
 http://localhost:5000/api/v1/
 ```
+
 ## 🧪 Example cURL Request
 
 Create a user:
