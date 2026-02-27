@@ -396,15 +396,21 @@ PUT	/users/<id>	Update user
 
 ✅ DELETE available only for Reviews.
 
-🧪 Testing
-✅ Run Unit Tests
+## 🧪 Testing
+### ✅ Run Unit Tests
+```bash
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 python3 -m unittest discover tests
-▶️ Running the Application
-1️⃣ Install dependencies
+```
+## ▶️ Running the Application
+### 1️⃣ Install dependencies
+```bash
 pip3 install -r requirements.txt
-2️⃣ Start the server
+```
+### 2️⃣ Start the server
+```bash
 python3 run.py
+```
 
 Server will run on:
 ```code
@@ -415,7 +421,7 @@ Swagger documentation:
 ```code
 http://localhost:5000/api/v1/
 ```
-🧪 Example cURL Request
+## 🧪 Example cURL Request
 
 Create a user:
 ```bash
@@ -423,7 +429,7 @@ curl -X POST http://localhost:5000/api/v1/users/ \
 -H "Content-Type: application/json" \
 -d '{"first_name":"Alice","last_name":"Doe","email":"alice@example.com"}'
 ```
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 Python 3
 
