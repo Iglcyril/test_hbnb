@@ -402,12 +402,12 @@ PUT	/users/<id>	Update user
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 python3 -m unittest discover tests
 ```
-## ▶️ Running the Application
-### 1️⃣ Install dependencies
+##  ▶️ Running the Application
+###  1️⃣ Install dependencies
 ```bash
 pip3 install -r requirements.txt
 ```
-## 2️⃣ Start the server
+##  2️⃣ Start the server
 
 ```bash
 python3 run.py
