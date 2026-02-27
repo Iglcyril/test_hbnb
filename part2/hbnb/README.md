@@ -353,7 +353,7 @@ hbnb/
 ├── requirements.txt
 
 
-###  🚀 API Endpoints
+## 🚀 API Endpoints
 
 All routes are prefixed with:
 
