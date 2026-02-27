@@ -366,7 +366,7 @@ PUT	/users/<id>	Update user
 ⚠️ Passwords are stored but never returned in API responses.
 🚫 DELETE not implemented.
 
-🏷️ Amenities
+## 🏷️ Amenities
 
 | Method | Endpoint | Description |
 |--------|----------|------------ |
@@ -375,7 +375,7 @@ PUT	/users/<id>	Update user
 | GET	| amenities/<id> | Retrieve one |
 | PUT	| amenities/<id> | Update |
 
-🏠 Places
+## 🏠 Places
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -384,7 +384,7 @@ PUT	/users/<id>	Update user
 | GET | places/<id> | Retrieve place (with owner & amenities) |
 | PUT | places/<id> | Update |
 
-📝 Reviews
+## 📝 Reviews
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
