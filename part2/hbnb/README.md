@@ -376,18 +376,23 @@ PUT	/users/<id>	Update user
 | PUT	| amenities/<id> | Update |
 
 🏠 Places
-Method	Endpoint	Description
-POST	/places/	Create place
-GET	/places/	List all places
-GET	/places/<id>	Retrieve place (with owner & amenities)
-PUT	/places/<id>	Update
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | places | Create place |
+| GET | places | List all places |
+| GET | places/<id> | Retrieve place (with owner & amenities) |
+| PUT | places/<id> | Update |
+
 📝 Reviews
-Method	Endpoint	Description
-POST	/reviews/	Create
-GET	/reviews/	List
-GET	/reviews/<id>	Retrieve
-PUT	/reviews/<id>	Update
-DELETE	/reviews/<id>	Delete
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | reviews | Create |
+| GET | reviews | List |
+| GET | reviews/<id> | Retrieve |
+| PUT | reviews/<id> | Update |
+| DELETE | reviews/<id> | Delete |
 
 ✅ DELETE available only for Reviews.
 
